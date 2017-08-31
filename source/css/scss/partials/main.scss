@@ -1,0 +1,28 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+body {
+	background: $white;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	// font-family: $roboto-slab;
+	color: $clr-2;
+	line-height: 1.5em;
+}
+
+%wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 1em;
+	@include mq-at-least(600px) {
+		padding: 0 2em;
+	}
+}

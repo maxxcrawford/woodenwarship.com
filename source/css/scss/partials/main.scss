@@ -9,13 +9,31 @@ html {
 }
 
 body {
-	background: $white;
+	font-family: 'Press Start 2P', cursive;
+	background: $black;
 	position: relative;
 	padding: 0;
 	margin: 0;
 	// font-family: $roboto-slab;
 	color: $clr-2;
 	line-height: 1.5em;
+}
+
+main {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+}
+
+.wrapper {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
 
 %wrapper {
@@ -25,4 +43,24 @@ body {
 	@include mq-at-least(600px) {
 		padding: 0 2em;
 	}
+}
+// @include textGlitch("example-one", 17, white, black, red, blue, 450, 115);
+.example-one {
+	font-size: 100px;
+	display: none;
+	@include mq-at-least(600px) {
+		display: block;
+	}
+	@include textGlitch("example-one", 17, white, black, red, blue, 1300, 115);
+}
+
+.example-two {
+	margin-left: 10%;
+	text-align: left;
+	font-size: 30px;
+	display: inline-block;
+	@include mq-at-least(600px) {
+		display: none;
+	}
+	@include textGlitch("example-one", 17, white, black, red, blue, 1300, 115);
 }

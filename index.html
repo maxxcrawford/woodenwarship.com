@@ -1,26 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <!--
+    ======================================================================
+       __  ___                 _____                ___            __
+      /  |/  /__ ___ ____ __  / ___/______ __    __/ _/__  _______/ /
+     / /|_/ / _ `/\ \ /\ \ / / /__/ __/ _ `/ |/|/ / _/ _ \/ __/ _  /
+    /_/  /_/\_,_//_\_\/_\_\  \___/_/  \_,_/|__,__/_/ \___/_/  \_,_/
+
+    ======================================================================
+    -->
     <meta charset="utf-8">
-    <title>Sample Page</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>W O O D E N W A R S H I P</title>
+    <meta property="og:url" content="http://www.woodenwarship.com" />
+    <meta property="og:title" content="W O O D E N W A R S H I P" />
+    <meta property="og:type" content="website" />
+    <style>
+    body {
+        background: black;
+        position: relative;
+    }
+    img {
+        position: fixed;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+    }
+    button {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        display: block;
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+        border: none;
+        background: none;
+        outline: none;
+        transition: all 1s ease-in;
+    }
+    button:hover {
+        background: red;
+        width: 100%;
+    }
+
+    button:active {
+        background: maroon;
+    }
+
+    </style>
+
 </head>
 
 <body>
-		<main>
-			<div class="wrapper">
-				<div class="example-one" data-text="woodenwarship">woodenwarship</div>
-				<div class="example-two" data-text="wooden warship">wooden warship</div>
-			</div>
-		</main>
+    &nbsp;
+    <!-- Put HTML Here -->
+    <button></button>
+    <a href="//maxxcrawford.com"><img src="http://media.giphy.com/media/3oEduRTTIkzDUKVkGI/giphy.gif" /></a>
 
-    <!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
     <script>
     // Put Scripts Here
+        var h, w;
+        $(window).ready(function(){
+            h = $('img').height() * -0.5;
+            w = $('img').width() * -0.5;
+            $('img').css({
+                'margin-top': h,
+                'margin-left': w,
+                'height': $('img').height(),
+                'width': $('img').width()
+            });
+        });
+
+        $(window).resize(function(){
+            console.log('resize');
+
+            $('img').attr('style', '');
+
+            h = $('img').height() * -0.5;
+            w = $('img').width() * -0.5;
+            $('img').css({
+                'margin-top': h,
+                'margin-left': w,
+                'height': $('img').height(),
+                'width': $('img').width()
+            });
+        });
+
+        $('button').on('click', function(){
+            $('img').attr('src', 'http://media.giphy.com/media/3oEdv6lfWmsHeginKg/giphy.gif');
+        });
+
     </script>
 </body>
 

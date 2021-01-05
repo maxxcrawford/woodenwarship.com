@@ -18,88 +18,22 @@
     <meta property="og:url" content="http://www.woodenwarship.com" />
     <meta property="og:title" content="W O O D E N W A R S H I P" />
     <meta property="og:type" content="website" />
-    <style>
-    body {
-        background: black;
-        position: relative;
-    }
-    img {
-        position: fixed;
-        display: block;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: auto;
-    }
-    button {
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        display: block;
-        bottom: 0;
-        right: 0;
-        z-index: 99;
-        border: none;
-        background: none;
-        outline: none;
-        transition: all 1s ease-in;
-    }
-    button:hover {
-        background: none;
-        width: 100%;
-    }
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNTSV0ZTD6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    button:active {
-        background: maroon;
-    }
-
-    </style>
-
+      gtag('config', 'G-YNTSV0ZTD6');
+    </script>
 </head>
 
 <body>
-    &nbsp;
-    <!-- Put HTML Here -->
-    <button></button>
-    <a href="https://maxxcrawford.com"><img src="//media.giphy.com/media/3oEduRTTIkzDUKVkGI/giphy.gif" /></a>
-
-
-    <script src="//code.jquery.com/jquery.min.js"></script>
-
-    <script>
-    // Put Scripts Here
-        var h, w;
-        $(window).ready(function(){
-            h = $('img').height() * -0.5;
-            w = $('img').width() * -0.5;
-            $('img').css({
-                'margin-top': h,
-                'margin-left': w,
-                'height': $('img').height(),
-                'width': $('img').width()
-            });
-        });
-
-        $(window).resize(function(){
-            // console.log('resize');
-
-            $('img').attr('style', '');
-
-            h = $('img').height() * -0.5;
-            w = $('img').width() * -0.5;
-            $('img').css({
-                'margin-top': h,
-                'margin-left': w,
-                'height': $('img').height(),
-                'width': $('img').width()
-            });
-        });
-
-        $('button').on('click', function(){
-            $('img').attr('src', 'http://media.giphy.com/media/3oEdv6lfWmsHeginKg/giphy.gif');
-        });
-
-    </script>
+    <a href="https://maxxcrawford.com"><img id="img" src="https://media.giphy.com/media/3oEduRTTIkzDUKVkGI/giphy.gif" /></a>
+    <script type="text/javascript" src="assets/app.js"></script>
 </body>
 
 </html>
